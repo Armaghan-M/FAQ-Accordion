@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Overpass&display=swap");
+
+* {
+  font-family: "Kumbh Sans";
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background: linear-gradient(90deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 10px 15px 30px black;
+  width: 830px;
+  height: 480px;
+  padding: 0 35px 15px 35px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pictures {
+  width: 50%;
+  height: 100%;
+}
+
+.pattern {
+  width: 785px;
+  position: absolute;
+  left: -391px;
+  top: -128px;
+}
+.woman {
+  position: absolute;
+  left: -67px;
+  bottom: 74px;
+}
+
+.box {
+  position: absolute;
+  left: 132px;
+  bottom: 163px;
+  z-index: 10;
+}
+
+.accordions {
+  margin: 0 auto;
+}
+
+.accordions-wrapper {
+  height: 340px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 30px;
+  height: 25px;
+  color: hsl(238, 29%, 16%);
+}
+
+.accordion {
+  width: 350px;
+  height: 90px;
+  padding: 0;
+  color: hsl(240, 6%, 50%);
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  position: relative;
+}
+.accordion::after {
+  content: url(./images/icon-arrow-down.svg);
+  position: absolute;
+  right: 15px;
+}
+
+button.accordion.bold::after {
+  transform: scaleY(-1);
+}
+
+.content {
+  display: none;
+  max-width: 350px;
+  color: hsl(240, 6%, 50%);
+}
+
+.active {
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.bold {
+  color: hsl(238, 29%, 16%);
+  font-weight: 900;
+  border: none;
+}
